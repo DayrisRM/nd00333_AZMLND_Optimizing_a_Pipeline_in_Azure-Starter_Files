@@ -18,7 +18,9 @@ from azureml.data.datapath import DataPath
 
 ds = Dataset.Tabular.from_delimited_files(path="https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv")
 
-print(dataset.to_pandas_dataframe())
+ds = dataset.to_pandas_dataframe()
+
+print(ds)
 
 x, y = clean_data(ds)
 
